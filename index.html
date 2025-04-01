@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
 
     <title>Frontend Mentor | Time tracking dashboard</title>
 
@@ -15,6 +15,7 @@
         .attribution {
             font-size: 11px;
             text-align: center;
+            display: none;
         }
 
         .attribution a {
@@ -25,68 +26,206 @@
 </head>
 
 <body>
+    <!-- Card wrapper and grid -->
+    <main class="wrapper grid_container">
+        <!-- profile card -->
+        <div class="card card--profile grid_item">
+            <div class="card__profile-info">
+                <div class="card_profile-picture">
+                    <img src="/assets/images/image-jeremy.png" alt="Profile Picture of the user" width="234"
+                        height="234">
+                </div>
+                <div class="card__profile-content">
+                    <p>
+                        Report for
+                    </p>
+                    <h1 class="card__profile-name">
+                        Jeremy Robson
+                    </h1>
+                </div>
+            </div>
+            <div class="card__options">
+                <h3 class="card__option">
+                    Daily
+                </h3>
+                <h3 class="card__option">
+                    Weekly
+                </h3>
+                <h3 class="card__option">
+                    Monthly
+                </h3>
+            </div>
+        </div>
 
-    Report for
-    Jeremy Robson
+        <!-- Work card -->
+        <div class="card grid_item">
+            <div class="card__header">
+                <h3 class="card__title">
+                    Work
+                </h3>
+                <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options">
+            </div>
+            <div class="card__content">
 
-    Daily
-    Weekly
-    Monthly
+                <!-- 5hrs daily
+                    Previous - 7hrs daily -->
 
-    Work
-    5hrs <!-- daily -->
-    Previous - 7hrs <!-- daily -->
-    32hrs <!-- weekly -->
-    Previous - 36hrs <!-- weekly -->
-    103hrs <!-- monthly -->
-    Previous - 128hrs <!-- monthly -->
+                <p class="card__current-hours">
+                    32hrs <!-- weekly -->
+                </p>
+                <p class="card__comparison-label">
+                    Previous - 36hrs <!-- weekly -->
+                </p>
 
-    Play
-    1hr <!-- daily -->
-    Previous - 2hrs <!-- daily -->
-    10hrs <!-- weekly -->
-    Previous - 8hrs <!-- weekly -->
-    23hrs <!-- monthly -->
-    Previous - 29hrs <!-- monthly -->
+                <!-- 103hrs monthly
+                    Previous - 128hrs monthly -->
+            </div>
+        </div>
 
-    Study
-    0hrs <!-- daily -->
-    Previous - 1hr <!-- daily -->
-    4hrs <!-- weekly -->
-    Previous - 7hrs <!-- weekly -->
-    13hrs <!-- monthly -->
-    Previous - 19hrs <!-- monthly -->
+        <!-- Play card -->
+        <div class="card grid_item">
+            <div class="card__header">
+                <h3 class="card__title">
+                    Play
+                </h3>
+                <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options">
+            </div>
+            <div class="card__content">
 
-    Exercise
-    1hr <!-- daily -->
-    Previous - 1hr <!-- daily -->
-    4hrs <!-- weekly -->
-    Previous - 5hrs <!-- weekly -->
-    11hrs <!-- monthly -->
-    Previous - 18hrs <!-- monthly -->
+                <!-- 1hr daily
+                    Previous - 2hrs daily -->
 
-    Social
-    1hr <!-- daily -->
-    Previous - 3hrs <!-- daily -->
-    5hrs <!-- weekly -->
-    Previous - 10hrs <!-- weekly -->
-    21hrs <!-- monthly -->
-    Previous - 23hrs <!-- monthly -->
+                <p class="card__current-hours">
+                    10hrs <!-- weekly -->
+                </p>
+                <p class="card__comparison-label">
+                    Previous - 8hrs <!-- weekly -->
+                </p>
 
-    Self Care
-    0hrs <!-- daily -->
-    Previous - 1hr <!-- daily -->
-    2hrs <!-- weekly -->
-    Previous - 2hrs <!-- weekly -->
-    7hrs <!-- monthly -->
-    Previous - 11hrs <!-- monthly -->
+                <!-- 23hrs monthly
+                    Previous - 29hrs monthly -->
+            </div>
+        </div>
+
+        <!-- Study card -->
+        <div class="card grid_item">
+            <div class="card__header">
+                <h3 class="card__title">
+                    Study
+                </h3>
+                <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options">
+            </div>
+            <div class="card__content">
+
+                <!-- 0hrs daily
+                        Previous - 1hr daily -->
+
+                <p class="card__current-hours">
+                    4hrs <!-- weekly -->
+                </p>
+                <p class="card__comparison-label">
+                    Previous - 7hrs <!-- weekly -->
+                </p>
+
+                <!-- 13hrs monthly
+                    Previous - 19hrs monthly -->
+            </div>
+        </div>
+
+        <!-- Exercise card -->
+        <div class="card grid_item">
+            <div class="card__header">
+                <h3 class="card__title">
+                    Exercise
+                </h3>
+                <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options">
+            </div>
+            <div class="card__content">
+
+                <!-- 1hr daily
+                    Previous - 1hr daily -->
+
+                <p class="card__current-hours">
+                    4hrs <!-- weekly -->
+                </p>
+                <p class="card__comparison-label">
+                    Previous - 5hrs <!-- weekly -->
+                </p>
+
+                <!-- 11hrs monthly
+                    Previous - 18hrs monthly -->
+            </div>
 
 
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend
-            Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
-    </div>
+
+
+        </div>
+
+        <!-- Social card -->
+        <div class="card grid_item">
+            <div class="card__header">
+                <h3 class="card__title">
+                    Social
+                </h3>
+                <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options">
+            </div>
+            <div class="card__content">
+
+                <!-- 1hr daily
+                    Previous - 3hrs daily -->
+
+                <p class="card__current-hours">
+                    5hrs <!-- weekly -->
+                </p>
+                <p class="card__comparison-label">
+                    Previous - 10hrs <!-- weekly -->
+                </p>
+
+                <!-- 21hrs monthly
+                    Previous - 23hrs monthly -->
+            </div>
+        </div>
+
+        <!-- Self care card -->
+        <div class="card grid_item">
+            <div class="card__header">
+                <h3 class="card__title">
+                    Self Care
+                </h3>
+                <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options">
+            </div>
+            <div class="card__content">
+
+                <!-- 0hrs daily
+                    Previous - 1hr daily -->
+
+                <p class="card__current-hours">
+                    2hrs <!-- weekly -->
+                </p>
+                <p class="card__comparison-label">
+                    Previous - 2hrs <!-- weekly -->
+                </p>
+
+                <!-- 7hrs monthly
+                    Previous - 11hrs monthly -->
+            </div>
+
+
+
+
+        </div>
+    </main>
+
+    <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">
+            Frontend Mentor
+        </a>.
+        Coded by
+        <a href="https://www.frontendmentor.io/profile/adeysh">
+            Adesh Katiya
+        </a>.
+    </footer>
 </body>
 
 </html>
