@@ -19,10 +19,11 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.5;
+    letter-spacing: u.rem(.02);
     background-color: var(--color-main-bg);
     color: #fff;
 
-    @include u.flexCenter;
+    @include u.flexbox($direction: row, $align: center, $justify: center);
     flex-direction: column;
 }
 

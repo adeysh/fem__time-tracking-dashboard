@@ -1,0 +1,208 @@
+@use '../util' as u;
+
+.card {
+
+    background-color: var(--color-card-bg);
+    border-radius: u.rem(15);
+    padding: u.rem(26) u.rem(24);
+    color: var(--color-text-light-main);
+    position: relative;
+
+    &--profile {
+        grid-area: card-profile;
+        padding: 0;
+
+        &::before {
+            display: none;
+        }
+
+        @include u.breakpoint($from: "desktop") {
+            position: relative;
+            @include u.flexbox($direction: column, $align: flex-start, $justify: flex-end);
+        }
+    }
+
+    &__profile-info {
+        background-color: var(--color-profile-info-bg);
+        padding: u.rem(32) u.rem(28);
+        border-radius: inherit;
+
+        @include u.flexbox($direction: row, $align: center, $justify: center);
+        gap: u.rem(20);
+
+        @include u.breakpoint($from: "desktop") {
+            position: absolute;
+            top: -38px;
+            left: 0;
+            right: 0;
+            min-height: u.rem(300);
+            padding: u.rem(36) u.rem(36) 0;
+            gap: u.rem(28);
+
+
+            @include u.flexbox($direction: column, $justify: flex-start);
+        }
+
+    }
+
+    &_profile-picture {
+        width: u.rem(70);
+        border: u.rem(3) solid var(--color-border-profile-img);
+        border-radius: 50%;
+    }
+
+    &__profile-content {
+        p {
+            color: var(--color-purple-text-light);
+        }
+    }
+
+    &__profile-name {
+        color: var(--color-profile-card-name);
+        font-weight: var(--fw-light);
+        font-size: var(--fs-xlarge);
+        line-height: 1.2;
+
+        @include u.breakpoint($from: "desktop") {
+            font-size: var(--fs-xxlarge);
+        }
+    }
+
+    &__options {
+        padding: u.rem(20) 0;
+        @include u.flexbox($justify: space-evenly);
+
+        @include u.breakpoint($from: "desktop") {
+            @include u.flexbox($direction: column, $justify: flex-start, $align: flex-start);
+            padding: u.rem(20);
+            gap: u.rem(16);
+            width: 100%;
+        }
+    }
+
+    &__option {
+        font-size: var(--fs-large);
+        font-weight: var(--fw-light);
+        background-color: transparent;
+        color: var(--color-profile-card-options);
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            color: var(--color-text-light-main);
+            cursor: pointer;
+        }
+
+        @include u.breakpoint($from: "desktop") {
+            // padding: u.rem(2);
+        }
+    }
+
+    &--work {
+        grid-area: card-work;
+
+        .card__backdrop {
+            background-color: var(--color-card-work);
+            background-image: url('/assets/images/icon-work.svg');
+        }
+    }
+
+    &--play {
+        grid-area: card-play;
+
+        .card__backdrop {
+            background-color: var(--color-card-play);
+            background-image: url('/assets/images/icon-play.svg');
+        }
+    }
+
+    &--study {
+        grid-area: card-study;
+
+        .card__backdrop {
+            background-color: var(--color-card-study);
+            background-image: url('/assets/images/icon-study.svg');
+        }
+    }
+
+    &--exercise {
+        grid-area: card-exercise;
+
+        .card__backdrop {
+            background-color: var(--color-card-exercise);
+            background-image: url('/assets/images/icon-exercise.svg');
+        }
+    }
+
+    &--social {
+        grid-area: card-social;
+
+        .card__backdrop {
+            background-color: var(--color-card-social);
+            background-image: url('/assets/images/icon-social.svg');
+        }
+    }
+
+    &--self-care {
+        grid-area: card-self-care;
+
+        .card__backdrop {
+            background-color: var(--color-card-self-care);
+            background-image: url('/assets/images/icon-self-care.svg');
+        }
+    }
+
+    &__backdrop {
+        width: 100%;
+        background-color: white;
+        height: 100px;
+        position: absolute;
+        top: -38px;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        border-radius: inherit;
+        background-repeat: no-repeat;
+        background-position-x: 93%;
+        background-position-y: -20%;
+    }
+
+    &__header {
+        @include u.flexbox($align: center, $justify: space-between);
+
+        button {
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+
+    &__title {
+        font-size: var(--fs-large);
+        font-weight: var(--fw-medium);
+    }
+
+    &__menu {
+        width: u.rem(20);
+    }
+
+    &__content {
+        @include u.flexbox($align: center, $justify: space-between);
+
+        @include u.breakpoint($from: "desktop") {
+            @include u.flexbox($direction: column);
+            margin-block-start: u.rem(16);
+        }
+    }
+
+    &__current-hours {
+        font-size: var(--fs-xxlarge);
+        font-weight: var(--fw-light);
+    }
+
+    &__comparison-label {
+        font-size: var(--fs-body);
+        font-weight: var(--fw-light);
+        color: var(--color-comparison-label);
+    }
+
+
+}

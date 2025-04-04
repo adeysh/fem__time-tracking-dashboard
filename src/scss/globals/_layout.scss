@@ -3,5 +3,47 @@
 .wrapper {
     width: min(u.rem(1110), calc(100% - u.rem(40)));
     margin-inline: auto;
+    padding-block: u.rem(100);
     height: 100%;
+    min-width: u.rem(320);
+
+    @include u.breakpoint($from: "desktop") {
+        position: relative;
+        padding: 0;
+        min-height: u.rem(400);
+    }
+}
+
+.grid_container {
+    display: grid;
+    grid-template-areas:
+        "card-profile"
+        "card-work"
+        "card-play"
+        "card-study"
+        "card-exercise"
+        "card-social"
+        "card-self-care";
+
+    gap: u.rem(80);
+
+    @include u.breakpoint($from: "tablet", $to: "desktop") {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card-profile card-profile"
+            "card-work card-play"
+            "card-study card-exercise"
+            "card-social card-self-care";
+
+        column-gap: u.rem(32);
+    }
+
+    @include u.breakpoint($from: "desktop") {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card-profile card-work card-play card-study"
+            "card-profile card-exercise card-social card-self-care";
+        row-gap: u.rem(70);
+        column-gap: u.rem(32);
+    }
 }

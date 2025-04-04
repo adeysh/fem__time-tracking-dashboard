@@ -20,4 +20,19 @@
 
     // Semantic mappings
     --color-main-bg: var(--Navy-950);
+    --color-card-bg: var(--Navy-900);
+    --color-profile-info-bg: var(--Purple-600);
+    --color-border-profile-img: hsl(0, 0%, 100%);
+    --color-purple-text-light: var(--Navy-200);
+    --color-profile-card-name: hsla(0, 0%, 100%, 0.816);
+    --color-profile-card-options: var(--Purple-500);
+    --color-text-light-main: hsla(0, 0%, 100%, 0.891);
+    --color-comparison-label: var(--Navy-200);
+
+    --color-card-work: var(--Orange-300-work);
+    --color-card-play: var(--Blue-300-play);
+    --color-card-study: var(--Pink-400-study);
+    --color-card-exercise: var(--Green-400-exercise);
+    --color-card-social: var(--Purple-700-social);
+    --color-card-self-care: var(--Yellow-300-self-care);
 }

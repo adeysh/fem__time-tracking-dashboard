@@ -10,6 +10,12 @@
 
     <title>Frontend Mentor | Time tracking dashboard</title>
 
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
         .attribution {
@@ -45,174 +51,220 @@
                 </div>
             </div>
             <div class="card__options">
-                <h3 class="card__option">
+                <button class="card__option" id="daily">
                     Daily
-                </h3>
-                <h3 class="card__option">
+                </button>
+                <button class="card__option" id="weekly">
                     Weekly
-                </h3>
-                <h3 class="card__option">
+                </button>
+                <button class="card__option" id="monthly">
                     Monthly
-                </h3>
+                </button>
             </div>
         </div>
 
         <!-- Work card -->
-        <div class="card grid_item">
+        <div class="card card--work grid_item">
+            <div class="card__backdrop">
+                <p class="visually-hidden">card backdrop</p>
+            </div>
             <div class="card__header">
                 <h3 class="card__title">
                     Work
                 </h3>
-                <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options">
+                <button>
+                    <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options" class="card__menu">
+                </button>
             </div>
             <div class="card__content">
 
                 <!-- 5hrs daily
-                    Previous - 7hrs daily -->
+                    Last - 7hrs daily -->
 
                 <p class="card__current-hours">
                     32hrs <!-- weekly -->
                 </p>
                 <p class="card__comparison-label">
-                    Previous - 36hrs <!-- weekly -->
+                    Last
+                    <span class="card_comparison-title">Week</span>
+                    -
+                    <span class="card__comparison-previous-time">36hrs</span>
+                    <!-- weekly -->
                 </p>
 
                 <!-- 103hrs monthly
-                    Previous - 128hrs monthly -->
+                    Last - 128hrs monthly -->
             </div>
         </div>
 
         <!-- Play card -->
-        <div class="card grid_item">
+        <div class="card card--play grid_item">
+            <div class="card__backdrop">
+                <p class="visually-hidden">card backdrop</p>
+            </div>
             <div class="card__header">
                 <h3 class="card__title">
                     Play
                 </h3>
-                <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options">
+                <button>
+                    <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options" class="card__menu">
+                </button>
             </div>
             <div class="card__content">
 
                 <!-- 1hr daily
-                    Previous - 2hrs daily -->
+                    Last - 2hrs daily -->
 
                 <p class="card__current-hours">
                     10hrs <!-- weekly -->
                 </p>
                 <p class="card__comparison-label">
-                    Previous - 8hrs <!-- weekly -->
+                    Last
+                    <span class="card_comparison-title">Week</span>
+                    -
+                    <span class="card__comparison-previous-time">8hrs</span>
+                    <!-- weekly -->
                 </p>
 
                 <!-- 23hrs monthly
-                    Previous - 29hrs monthly -->
+                    Last - 29hrs monthly -->
             </div>
         </div>
 
         <!-- Study card -->
-        <div class="card grid_item">
+        <div class="card card--study grid_item">
+            <div class="card__backdrop">
+                <p class="visually-hidden">card backdrop</p>
+            </div>
             <div class="card__header">
                 <h3 class="card__title">
                     Study
                 </h3>
-                <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options">
+                <button>
+                    <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options" class="card__menu">
+                </button>
             </div>
             <div class="card__content">
 
                 <!-- 0hrs daily
-                        Previous - 1hr daily -->
+                        Last - 1hr daily -->
 
                 <p class="card__current-hours">
                     4hrs <!-- weekly -->
                 </p>
                 <p class="card__comparison-label">
-                    Previous - 7hrs <!-- weekly -->
+                    Last
+                    <span class="card_comparison-title">Week</span>
+                    -
+                    <span class="card__comparison-previous-time">7hrs</span>
+                    <!-- weekly -->
                 </p>
 
                 <!-- 13hrs monthly
-                    Previous - 19hrs monthly -->
+                    Last - 19hrs monthly -->
             </div>
         </div>
 
         <!-- Exercise card -->
-        <div class="card grid_item">
+        <div class="card card--exercise grid_item">
+            <div class="card__backdrop">
+                <p class="visually-hidden">card backdrop</p>
+            </div>
             <div class="card__header">
                 <h3 class="card__title">
                     Exercise
                 </h3>
-                <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options">
+                <button>
+                    <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options" class="card__menu">
+                </button>
             </div>
             <div class="card__content">
 
                 <!-- 1hr daily
-                    Previous - 1hr daily -->
+                    Last - 1hr daily -->
 
                 <p class="card__current-hours">
                     4hrs <!-- weekly -->
                 </p>
                 <p class="card__comparison-label">
-                    Previous - 5hrs <!-- weekly -->
+                    Last
+                    <span class="card_comparison-title">Week</span>
+                    -
+                    <span class="card__comparison-previous-time">5hrs</span>
+                    <!-- weekly -->
                 </p>
 
                 <!-- 11hrs monthly
-                    Previous - 18hrs monthly -->
+                    Last - 18hrs monthly -->
             </div>
-
-
-
-
         </div>
 
         <!-- Social card -->
-        <div class="card grid_item">
+        <div class="card card--social grid_item">
+            <div class="card__backdrop">
+                <p class="visually-hidden">card backdrop</p>
+            </div>
             <div class="card__header">
                 <h3 class="card__title">
                     Social
                 </h3>
-                <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options">
+                <button>
+                    <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options" class="card__menu">
+                </button>
             </div>
             <div class="card__content">
 
                 <!-- 1hr daily
-                    Previous - 3hrs daily -->
+                    Last - 3hrs daily -->
 
                 <p class="card__current-hours">
                     5hrs <!-- weekly -->
                 </p>
                 <p class="card__comparison-label">
-                    Previous - 10hrs <!-- weekly -->
+                    Last
+                    <span class="card_comparison-title">Week</span>
+                    -
+                    <span class="card__comparison-previous-time">10hrs</span>
+                    <!-- weekly -->
                 </p>
 
                 <!-- 21hrs monthly
-                    Previous - 23hrs monthly -->
+                    Last - 23hrs monthly -->
             </div>
         </div>
 
         <!-- Self care card -->
-        <div class="card grid_item">
+        <div class="card card--self-care grid_item">
+            <div class="card__backdrop">
+                <p class="visually-hidden">card backdrop</p>
+            </div>
             <div class="card__header">
                 <h3 class="card__title">
                     Self Care
                 </h3>
-                <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options">
+                <button>
+                    <img src="/assets/images/icon-ellipsis.svg" alt="Ellipses icon for more options" class="card__menu">
+                </button>
             </div>
             <div class="card__content">
 
                 <!-- 0hrs daily
-                    Previous - 1hr daily -->
+                    Last - 1hr daily -->
 
                 <p class="card__current-hours">
                     2hrs <!-- weekly -->
                 </p>
                 <p class="card__comparison-label">
-                    Previous - 2hrs <!-- weekly -->
+                    Last
+                    <span class="card_comparison-title">Week</span>
+                    -
+                    <span class="card__comparison-previous-time">2hrs</span>
+                    <!-- weekly -->
                 </p>
 
                 <!-- 7hrs monthly
-                    Previous - 11hrs monthly -->
+                    Last - 11hrs monthly -->
             </div>
-
-
-
-
         </div>
     </main>
 
