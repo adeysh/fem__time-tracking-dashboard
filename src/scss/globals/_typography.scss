@@ -1,9 +1,12 @@
+@use '../util' as u;
+
 :root {
     // font-size
-    --fs-body: 16px;
-    --fs-large: 18px;
-    --fs-xlarge: 24px;
-    --fs-xxlarge: 32px;
+    --fs-body: #{u.rem(14)};
+    --fs-large: #{u.rem(18)};
+    --fs-xlarge: #{u.rem(24)};
+    --fs-xxlarge: #{u.rem(40)};
+    --fs-3xlarge: #{u.rem(52)};
 
     // font-family
     --ff-primary: "Rubik", sans-serif;

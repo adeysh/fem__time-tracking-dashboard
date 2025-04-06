@@ -10,7 +10,7 @@
     @include u.breakpoint($from: "desktop") {
         position: relative;
         padding: 0;
-        min-height: u.rem(400);
+        min-height: u.rem(450);
     }
 }
 

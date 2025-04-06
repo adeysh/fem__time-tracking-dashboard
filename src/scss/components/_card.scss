@@ -40,10 +40,10 @@
 
         @include u.breakpoint($from: "desktop") {
             position: absolute;
-            top: -38px;
+            top: u.rem(-40);
             left: 0;
             right: 0;
-            min-height: u.rem(300);
+            min-height: u.rem(330);
             padding: u.rem(36) u.rem(36) 0;
             gap: u.rem(28);
 
@@ -82,7 +82,7 @@
 
         @include u.breakpoint($from: "desktop") {
             @include u.flexbox($direction: column, $justify: flex-start, $align: flex-start);
-            padding: u.rem(20);
+            padding: 0 u.rem(25) u.rem(30);
             gap: u.rem(16);
             width: 100%;
         }
@@ -209,6 +209,10 @@
     &__current-hours {
         font-size: var(--fs-xxlarge);
         font-weight: var(--fw-light);
+
+        @include u.breakpoint($from: "desktop") {
+            font-size: var(--fs-3xlarge);
+        }
     }
 
     &__comparison-label {
