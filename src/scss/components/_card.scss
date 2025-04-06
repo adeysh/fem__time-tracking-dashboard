@@ -8,12 +8,20 @@
     color: var(--color-text-light-main);
     position: relative;
 
+    &:hover {
+        background-color: var(--color-card-hover);
+    }
+
     &--profile {
         grid-area: card-profile;
         padding: 0;
 
         &::before {
             display: none;
+        }
+
+        &:hover {
+            background-color: var(--Navy-900);
         }
 
         @include u.breakpoint($from: "desktop") {
