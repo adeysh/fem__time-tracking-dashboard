@@ -87,9 +87,14 @@
         color: var(--color-profile-card-options);
         transition: all .4s ease-in-out;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: var(--color-text-light-main);
             cursor: pointer;
+        }
+
+        &--active {
+            color: var(--color-text-light-main);
         }
 
         @include u.breakpoint($from: "desktop") {
